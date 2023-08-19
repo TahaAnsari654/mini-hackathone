@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+   /* Content Card styling */
+   .card-title {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.small-desc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #452c2c;
+}
+
+.small-desc {
+  font-size: 1em;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6293c8, #384c6c);
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  max-height: 320px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bttom, #c3e6ec, #a7d1d9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #364a60, #384c6c);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(100);
+  /* width: "100%"; */
+}
+
+.card:hover .small-desc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}
+.bg {
+        background-color: #4d84e2 !important;
+      }
+    
+    
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<body>
+   
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light  bg">
+        <a class="navbar-brand text-white" href="#">Blogging App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <div
+            class="form-inline my-2 my-lg-0"
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button class="btn my-2 my-sm-0 " type="submit">
+              <a href="../profile/profile.html" class="text-white">profile</a>
+            </button>
+            <button class="btn my-2 my-sm-0" type="submit">
+              <a href="../login/loginAndSignup.html" class="text-white">Log out</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+        <form   style="max-width: 1200px; margin: auto;"  onsubmit="return false" >
+            <div class="form-group" >
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter your Title" minlength="5" maxlength="50">
+ 
+            </div>
+            <div class="form-group">
+              <label for="description">Content</label>
+              <textarea  class="form-control" id="description" placeholder="What is your mind" rows="6" minlength="100" maxlength="3000" ></textarea>
+              </textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" onclick="publish()" >Publish blog</button>
+          </form>
+
+
+          <div>
+            <h1>MY BLOGS</h1>
+            
+            <div class="card">
+              <img
+                src="https://cdn.britannica.com/99/236599-050-1199AD2C/Mark-Zuckerberg-2019.jpg"
+                alt=""
+                style="width: 200px; border-radius: 20px"
+              />
+              <p class="card-title">mark zuckerberg</p>
+              <p class="small-desc">
+                It’s the end of an era. After 14 years, my good friend and partner Sheryl Sandberg is stepping down as COO of Meta. 
+        
+        When Sheryl joined me in 2008, I was only 23 years old and I barely knew anything about running a company. We’d built a great product — the Facebook website — but we didn’t yet have a profitable business and we were struggling to transition from a small startup to a real organization. Sheryl architected our ads business, hired great people, forged our management culture, and taught me how to run a company. She created opportunities for millions of people around the world, and she deserves the credit for so much of what Meta is today. 
+              </p>
+              <div class="go-corner">
+                <div class="go-arrow">→</div>
+              </div>
+            </div>>
+            </div>
+
+
+          </div>
+
+    </div>
+
+
+    <script src="dashboard.js" type="module"></script>
+    <script src="../config//firebase.js" type="module"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

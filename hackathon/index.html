@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* Content Card styling */
+      .card-title {
+        color: #262626;
+        font-size: 1.5em;
+        line-height: normal;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+      }
+
+      .small-desc {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #452c2c;
+      }
+
+      .small-desc {
+        font-size: 1em;
+      }
+
+      .go-corner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #6293c8, #384c6c);
+        border-radius: 0 4px 0 32px;
+      }
+
+      .go-arrow {
+        margin-top: -4px;
+        margin-right: -4px;
+        color: white;
+        font-family: courier, sans;
+      }
+
+      .card {
+        display: block;
+        position: relative;
+        max-width: 100%;
+        max-height: 520px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 2em 1.2em;
+        margin: 12px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        background: linear-gradient(to bttom, #c3e6ec, #a7d1d9);
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: linear-gradient(135deg, #364a60, #384c6c);
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.35s ease-out;
+      }
+
+      .card:hover:before {
+        transform: scale(100);
+        /* width: "100%"; */
+      }
+
+      .card:hover .small-desc {
+        transition: all 0.5s ease-out;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .card:hover .card-title {
+        transition: all 0.5s ease-out;
+        color: #ffffff;
+      }
+
+      .bg {
+        background-color: #4d84e2 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg">
+      <a class="navbar-brand text-white" href="#">Blogging App</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <div
+          class="form-inline my-2 my-lg-0"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn my-2 my-sm-0 " type="submit">
+            <a href="./login/loginAndSignup.html" class="text-white">Sign up</a>
+          </button>
+          <button class="btn my-2 my-sm-0" type="submit">
+            <a href="./login/loginAndSignup.html" class="text-white">Sign in</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+
+<div>
+  <h1 style="text-align:center;">Good Morning Readers</h1>
+</div>
+
+
+
+
+    <div class="card">
+      <img
+        src="https://cdn.britannica.com/99/236599-050-1199AD2C/Mark-Zuckerberg-2019.jpg"
+        alt=""
+        style="width: 200px; border-radius: 20px"
+      />
+      <p class="card-title">mark zuckerberg</p>
+      <p class="small-desc">
+        It’s the end of an era. After 14 years, my good friend and partner Sheryl Sandberg is stepping down as COO of Meta. 
+
+When Sheryl joined me in 2008, I was only 23 years old and I barely knew anything about running a company. We’d built a great product — the Facebook website — but we didn’t yet have a profitable business and we were struggling to transition from a small startup to a real organization. Sheryl architected our ads business, hired great people, forged our management culture, and taught me how to run a company. She created opportunities for millions of people around the world, and she deserves the credit for so much of what Meta is today. 
+      </p>
+      <div class="go-corner">
+        <div class="go-arrow">→</div>
+      </div>
+    </div>
+
+
+
+<br>
+<br>
+
+
+
+<div class="card">
+  <img
+    src="data:image/jpeg;base64,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"
+    alt=""
+    style="width: 200px; border-radius: 20px"
+  />
+  <p class="card-title">Jeff Bezos</p>
+  <p class="small-desc">
+    I live my life in such a way that when in quiet moment of reflection thinking back in my life, I have as few regrets as possible.
+
+    I believe in power of wandering. All of my best decisions in business and in life have been made with heart, intuition, guts, not analysis.
+    
+    As a senior executive you get paid to make small number of high quality decisions. Your job is not to make 1000s of decisions everyday. Is that worth it if the quality of decisions is low because you are tired, grouchy or any number of things.
+  </p>
+  <div class="go-corner">
+    <div class="go-arrow">→</div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+
+
+
+<div class="card">
+  <img
+    src="https://www.investopedia.com/thmb/2aiIrgENqxk_fOHi5sNho0HMCYA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1459166551-ce898f4cd2e04caab74bf5e6ba108605.jpg"
+    alt=""
+    style="width: 200px; border-radius: 20px"
+  />
+  <p class="card-title">elon musk </p>
+  <p class="small-desc">
+    In the same week, SpaceX – Musk’s commercial space exploration company – successfully launched its Falcon 9 rocket into orbit to deliver a payload to the International Space Station, and managed to bring the rocket back to earth and for the first time in history, land safely on a drone ship in the middle of the Atlantic Ocean.
+  </p>
+  <div class="go-corner">
+    <div class="go-arrow">→</div>
+  </div>
+</div>
+  </body>
+</html>
